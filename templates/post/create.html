@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Ingresar Nuevos Registros de Alumnos</h1>
+<form action="/post/create" method="post">
+    <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+    </div>
+    <div>
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido">
+    </div>
+    <div>
+        <label for="aprobado">Aprobado</label>
+        <input type="text" name="aprobado" id="aprobado">
+    </div>
+    <div>
+        <label for="nota">Nota</label>
+        <input type="text" name="nota" id="nota">
+    </div>
+    <div>
+        <label for="fecha">Fecha</label>
+        <input type="text" name="fecha" id="fecha">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

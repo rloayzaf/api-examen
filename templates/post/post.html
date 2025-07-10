@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="my-4"><strong>Nombres del Alumno:</strong> {{ post['nombre'] }} {{ post['apellido'] }}</h1>
+<p><strong>Fecha:</strong> {{ post['fecha'] }}</p>
+<p class="mb-4"><strong>Nota:</strong>: {{ post['nota'] }}</p>
+<a href="{{ url_for('get_all_post') }}" class="btn btn-primary">
+    Volver a Lista de Alumnos
+</a>
+{% endblock %}
