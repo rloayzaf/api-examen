@@ -58,10 +58,11 @@ def update_one_post(post_id):
     if request.method == "GET":
         return render_template("post/update.html", post=post)
     if request.method == "POST":
-        title = request.form["title"]
-        content = request.form["content"]
+        nombre = request.form["nombre"]
+        apellido = request.form["apellido"]
+        aprobado = request.form["aprobado"]
         conn = get_db_connection()
-        conn.execute('UPDATE alumnos SET title = ?, content = ? WHERE id = ?', (title, content, post_id))
+        conn.execute('UPDATE alumnos SET nombre= ?, apellido = ?,  aprobado = ?  WHERE id = ?', (nombre, apellido, aprobado , post_id))
         conn.commit()
         conn.close()
         return redirect(url_for('get_all_post'))

@@ -3,14 +3,22 @@
 {% block content %}
 <h1>Actualizar un Post</h1>
 <form action="/post/update/{{ post['id'] }}" method="post">
+
+
     <div>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="{{ post['title'] }}">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" value="{{ post['nombre'] }}">
     </div>
     <div>
-        <label for="content">content</label>
-        <textarea name="content" id="content">{{ post['content'] }}</textarea>
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido" value="{{ post['apellido'] }}">
     </div>
+    <div>
+        <label for="aprobado">Aprobado</label>
+        <input type="text" name="aprobado" id="aprobado" value="{{ post['aprobado] }}">
+    </div>
+
+
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 {% endblock %}
